@@ -1,0 +1,38 @@
+%Die Dokumentenklasse article ist wahrscheinlich die am häufigsten verwendete Klasse und dient dazu kurze und mittellange Dokumente zu erstellen. Es sollten ein paar Dinge auffallen.
+%1. Jeder Befehl in LaTeX startet mit einem \ (Auf deutschen Tastaturen AltGr + ß) Das, was hinter dem \ steht wird solange zum Befehl gezählt, bis erstmals ein Leerzeichen oder eine Zahl oder ein Sonderzeichen kommt.
+%2. Typischerweise stehen die Klammern hinter dem Befehl für die Dokumentenklasse und die Usepackages für zwei Dinge. In die geschweiften {} Klammern kommt der Name der Klasse/des Pakets. In die eckigen [] Klammern kommen mögliche Spezifikationen. Hier ist der Name der Klasse article. Es gibt auch beamer (für Präsentationen) und viele weitere Klassen, die allerdings seltener als diese zwei verwendet werden (beispielsweise die Klasse book, die sich für längere Dokumente unter Umständen besser als die Klasse article eignet).
+\usepackage[ngerman]{babel}
+%Das Usepackage babel erlaubt es voreingestellte Konfigurationen für bestimmte Sprachen zu verwenden. Das umfasst beispielsweise Dinge wie, dass die Überschrift vom Inhaltsverzeichnis automatisch Inhaltsverzeichnis und nicht Table of contents heißt, oder dass unter Abbildungen nicht figure sondern Abbildung steht. Solche Dinge könnte man alle auch selbst einstellen, jedoch erleichtern usepackages das enorm. Zudem sollte man spätestens hier bemerken, dass man, wenn man sich einmal eine Vorlage aus usepackages ect. zusammengebastelt hat, man diese Vorlage immer wieder verwenden kann und die eigenen Dokumente dann automatisch einen einheitlichen Stil bekommen.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%Die Usepackages inputenc und fontenc dienen dazu, den Zeichensatz, der verwendet werden soll anzupassen. Wir gehen da hier nicht tiefer drauf ein, da es ein einführender Kurs sein soll. Weitere Informationen findet man massenweise im Internet, es reicht sowas wie "LaTeX inputenc" zu googlen.
+\usepackage{hyphenat}
+\hyphenation{Mathe-matik wieder-gewinnen}
+%Diese beiden Befehle (also Paket + Befehl \hyphenation) dienen dazu festzulegen, wo LaTeX bei einem Wort, wenn es auf zwei Zeilen gebrochen werden soll, einen Umbruch setzen soll.
+%Bibliographie
+\usepackage{biblatex}
+\addbibresource{literature.bib}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%Diese vier Pakete binden den gesamten Mathesatz der American Mathematical Society ein und sollten standardmäßig eingebunden werden. Auch hier verweise ich an dieser Stelle alle Neugierigen für weitere Informationen erstmal an das Internet.
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=red
+}
+
+\usepackage{graphicx}
+\graphicspath{ {./Bilder/} }
+\usepackage{float}
+\usepackage{subcaption}
+
+\usepackage{geometry}
+\geometry{left=2cm, right=2cm, top=2cm, bottom=3cm,a4paper}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\newcommand{\rund}[1]{\left(#1\right)}
+\newcommand{\eck}[1]{\left[#1\right]}
+\newcommand{\intd}[1]{\text{d}#1}
