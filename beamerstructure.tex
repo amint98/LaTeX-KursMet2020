@@ -1,5 +1,8 @@
 \usepackage[ngerman]{babel}
 
+\usetheme{Warsaw}
+\usecolortheme{beaver}
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
@@ -14,6 +17,15 @@
 	colorlinks=true,
 	linkcolor=blue
 }
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{Inhaltsverzeichnis}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
 
 \newcommand{\rund}[1]{\left(#1\right)}
 \newcommand{\eck}[1]{\left[#1\right]}

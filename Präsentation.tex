@@ -1,7 +1,46 @@
 \documentclass{beamer}
 
 \input{beamerstructure.tex}
-
+\title{Meine erste \LaTeX Präsentation}
+\author{Mein Name}
+\date{\today}
 \begin{document}
 	
+\frame{\titlepage}
+
+\begin{frame}
+	\frametitle{Inhaltsverzeichnis}
+	\tableofcontents
+\end{frame}
+
+\section{Mein erstes Kapitel}
+\begin{frame}
+	\frametitle{Meine erste richtige Folie}
+	Einfach Text reinschreiben, der wird dann angezeigt. \\
+	$4 + 5 = 9$
+	\begin{equation}
+		4 + 5 = 9
+	\end{equation}
+\end{frame}
+\section{Mein zweites Kapitel}
+\begin{frame}
+	\frametitle{Meine erste richtige Folie}
+	Einfach Text reinschreiben, der wird dann angezeigt. \\
+	$4 + 5 = 9$
+	\begin{equation}
+		4 + 5 = 9
+	\end{equation}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Eine Folie mit Stichpunkten}
+	\begin{itemize}
+		\item Ein Stichpunkt.
+		\begin{itemize}
+			\item 
+		\end{itemize}
+		\item Noch ein Stichpunkt.
+	\end{itemize}
+\end{frame}
+
 \end{document}
